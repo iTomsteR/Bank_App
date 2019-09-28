@@ -10,6 +10,7 @@ public class BankApp {
         saving1.deposit(1000);
         saving1.withdraw(500);
         saving1.transfer("Alex", 250);
+        saving1.compountRate();
 
         //Create accounts based on data from CSV file
 
