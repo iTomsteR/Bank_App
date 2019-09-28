@@ -6,7 +6,6 @@ public class Checking extends Account {
     private long debitCardNum;
     private int debitCardPin;
 
-    //Constructor initialization
     public Checking(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
         super.modifyAccountNumber("2");
@@ -25,9 +24,6 @@ public class Checking extends Account {
         debitCardPin = randomNumber + (int) Math.pow(10, 3);
 
     }
-
-    //List specific methods for checking acc
-
 
     @Override
     public String toString() {

@@ -6,7 +6,6 @@ public class Savings extends Account {
     private int safetyDepositBoxId;
     private int safetyDepositBoxKey;
 
-    //Constructor initialization
 
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
@@ -26,7 +25,6 @@ public class Savings extends Account {
         safetyDepositBoxKey = randomNumber + (int) Math.pow(10, 3);
     }
 
-    //Common savings acc methods
     @Override
     public String toString() {
         return "\nAccount Type: Savings" + super.toString() +

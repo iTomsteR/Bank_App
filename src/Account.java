@@ -11,7 +11,6 @@ public abstract class Account implements IBaseRate {
     private static int index = 10000;
 
 
-    //Constructor - set base properties & initialize acc
 
     public Account(String name, String ssn, double initDeposit) {
         this.name = name;
@@ -48,7 +47,6 @@ public abstract class Account implements IBaseRate {
     public abstract void setRate();
 
 
-    //List common methods
     public void deposit(double amount) {
         balance += amount;
         System.out.println("\nDepositing " + amount + "$");
