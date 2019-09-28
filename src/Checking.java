@@ -13,10 +13,14 @@ public class Checking extends Account {
         setDebitCard();
     }
 
+    @Override
+    public void setRate() {
+        super.setRate(getBaseRate() * .25);
+    }
+
     private void setDebitCard() {
         Random r=new Random();
         int randomNumber = r.nextInt(900);
-//        debitCardNum = randomNumber + (long) Math.pow(10, 11);
         debitCardNum = (long) (Math.random() * Math.pow(10, 12));
         debitCardPin = randomNumber + (int) Math.pow(10, 3);
 

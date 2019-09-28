@@ -21,6 +21,8 @@ public abstract class Account implements IBaseRate {
         //set acc number
         index++;
         this.accountNumber = setAccountNumber();
+
+        setRate();
     }
 
     protected String setAccountNumber() {
@@ -39,6 +41,12 @@ public abstract class Account implements IBaseRate {
         return accountNumber;
     }
 
+    protected void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public abstract void setRate();
+
 
     //List common methods
 
@@ -47,6 +55,7 @@ public abstract class Account implements IBaseRate {
     public String toString() {
         return "\nName: " + name +
                 "\nAccount Number: " + accountNumber +
-                "\nBalance: " + balance;
+                "\nBalance: " + balance +
+                "\nRate: " + rate + "%";
     }
 }

@@ -14,6 +14,11 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
+    @Override
+    public void setRate() {
+        super.setRate(getBaseRate() - .35);
+    }
+
     private void setSafetyDepositBox() {
         Random r=new Random();
         int randomNumber = r.nextInt(900);
