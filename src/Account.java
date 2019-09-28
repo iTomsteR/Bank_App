@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public abstract class Account implements IBaseRate {
 
     //List common properties for checking and savings accounts
@@ -24,7 +26,8 @@ public abstract class Account implements IBaseRate {
     protected String setAccountNumber() {
         String lastTwoDigitsOfSsn = ssn.substring(ssn.length() - 2, ssn.length());
         int uniqueID = index;
-        int randomNumber = (int) (Math.random() * Math.pow(10, 3));
+        Random r=new Random();
+        int randomNumber = r.nextInt(900) + (int) Math.pow(10, 3);
         return lastTwoDigitsOfSsn + uniqueID + randomNumber;
     }
 

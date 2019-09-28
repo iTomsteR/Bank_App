@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Savings extends Account {
 
     //List specific properties to savings acc
@@ -13,8 +15,10 @@ public class Savings extends Account {
     }
 
     private void setSafetyDepositBox() {
-        safetyDepositBoxId = (int) (Math.random() * Math.pow(10, 3));
-        safetyDepositBoxKey = (int) (Math.random() * Math.pow(10, 4));
+        Random r=new Random();
+        int randomNumber = r.nextInt(900);
+        safetyDepositBoxId = randomNumber + (int) Math.pow(10, 2);
+        safetyDepositBoxKey = randomNumber + (int) Math.pow(10, 3);
     }
 
     //Common savings acc methods
