@@ -8,10 +8,13 @@ public class Checking extends Account {
     public Checking(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
         super.modifyAccountNumber("2");
-        System.out.println("New Checking acc");
-        System.out.println("Account Number: " + super.getAccountNumber());
     }
 
     //List specific methods for checking acc
 
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nAccount Type: Checking";
+    }
 }

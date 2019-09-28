@@ -9,10 +9,13 @@ public class Savings extends Account {
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
         super.modifyAccountNumber("1");
-        System.out.println("NEW saving acc");
     }
 
 
     //Common savings acc methods
+    @Override
+    public String toString() {
+        return super.toString() + "\nAccount Type: Savings";
+    }
 
 }

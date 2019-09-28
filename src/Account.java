@@ -15,7 +15,6 @@ public abstract class Account implements IBaseRate {
         this.name = name;
         this.ssn = ssn;
         balance = initDeposit;
-        System.out.println("Name: " + name + " SSN: " + ssn + " balance: " + balance);
 
         //set acc number
         index++;
@@ -40,4 +39,11 @@ public abstract class Account implements IBaseRate {
 
     //List common methods
 
+
+    @Override
+    public String toString() {
+        return "\nName: " + name +
+                "\nAccount Number: " + accountNumber +
+                "\nBalance: " + balance;
+    }
 }
