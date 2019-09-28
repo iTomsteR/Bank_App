@@ -22,11 +22,19 @@ public abstract class Account implements IBaseRate {
         this.accountNumber = setAccountNumber();
     }
 
-    private String setAccountNumber() {
+    protected String setAccountNumber() {
         String lastTwoDigitsOfSsn = ssn.substring(ssn.length() - 2, ssn.length());
         int uniqueID = index;
         int randomNumber = (int) (Math.random() * Math.pow(10, 3));
         return lastTwoDigitsOfSsn + uniqueID + randomNumber;
+    }
+
+    protected void modifyAccountNumber(String accountType) {
+        accountNumber = accountType + accountNumber;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
 

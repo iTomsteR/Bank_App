@@ -8,6 +8,7 @@ public class Savings extends Account {
 
     public Savings(String name, String ssn, double initDeposit) {
         super(name, ssn, initDeposit);
+        super.modifyAccountNumber("1");
         System.out.println("NEW saving acc");
     }
 
